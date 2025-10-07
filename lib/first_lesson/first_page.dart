@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:learning_flutter_again/pages/home_page.dart';
-import 'package:learning_flutter_again/pages/profile_page.dart';
-import 'package:learning_flutter_again/pages/settings_page.dart';
+import 'package:learning_flutter_again/first_lesson/home_page.dart';
+import 'package:learning_flutter_again/first_lesson/profile_page.dart';
+import 'package:learning_flutter_again/first_lesson/settings_page.dart';
 import 'package:learning_flutter_again/widgets/custom_app_bar.dart';
 
 class FirstPage extends StatefulWidget {

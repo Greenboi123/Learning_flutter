@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:learning_flutter_again/pages/first_page.dart';
-import 'package:learning_flutter_again/pages/home_page.dart';
-import 'package:learning_flutter_again/pages/settings_page.dart';
+import 'package:learning_flutter_again/first_lesson/first_page.dart';
+import 'package:learning_flutter_again/first_lesson/home_page.dart';
+import 'package:learning_flutter_again/first_lesson/settings_page.dart';
+import 'package:learning_flutter_again/second_lesson(setStates)/counter_page.dart';
 
 // var companyName = Text('Felix n Co', style:TextStyle(color: Colors.amber, fontSize: 40));
 // var myTransform = Matrix4.skewX(0.1);
@@ -346,20 +347,62 @@ DRAWER AND NAVIGATION
 //         )
 //       ),
 
+CAN ALSO NAVIGATE WITH BOTTOMNAVIGATIONBAR
+HERE IT NEEDS A STATEFUL WIDGET TO ALLOW CHANGES FROM UI INTERACTION
+(NEEDS TO BE A SEPERATE WIDGET FROM ANY PAGE YOU'RE CALLING)
+(SETSTATE() REBUILDS JUST WHAT IS NEEDED)
+// class _FirstPageState extends State<FirstPage> {
+//   int _selectedIndex = 0; // starts at homepage
+//
+//   void _navigateBottomBar(int index) {
+//     setState(() {
+//       _selectedIndex = index;
+//     });
+//   }
+//
+//   final List _pages = <Widget>[
+//     //home
+//     HomePage(),
+//
+//     //profile
+//     ProfilePage(),
+//
+//     //settings
+//     SettingsPage(),
+//   ];
+//
+//   @override
+//   Widget build(BuildContext context) {
+//
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text('TopBar'),
+//         centerTitle: true,
+//         backgroundColor: Colors.deepPurple,
+//       ),
+//       body: _pages[_selectedIndex],
+//       bottomNavigationBar: BottomNavigationBar(
+//         currentIndex: _selectedIndex,
+//         onTap: _navigateBottomBar,
+//         items: [
+//           BottomNavigationBarItem(
+//               icon: Icon(Icons.home),
+//               label: 'Home',
+//               ),
+//           BottomNavigationBarItem(
+//               icon: Icon(Icons.person),
+//               label: 'Profile'),
+//           BottomNavigationBarItem(
+//               icon: Icon(Icons.settings),
+//               label: 'Settings'),
+//         ])
+//     );
+//   }
+// }
 
 
 */
 
-
-const mainColor = Colors.white;
-const appBarText = Text(
-    "BOSH PIZZA!",
-    style: TextStyle(
-        fontSize: 21,
-        fontWeight: FontWeight.bold,
-        color: mainColor)
-);
-List names = ['bob', 'dan', 'steve'];
 
 void main() {
   runApp(const MyApp());
@@ -372,7 +415,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: FirstPage(),
+      home: CounterPage(),
     );
   }
 }
