@@ -280,6 +280,9 @@ void userTapped () {
 //   ),
 // )
 
+--------------------------------------------------------------------------------------------
+NAVIGATION:
+
 // AppBar(
 //   centerTitle: true,
 //   title: appBarText,
@@ -308,6 +311,41 @@ THE ADDED ROUTES ARE:
 //   },
 // );
 
+DRAWER AND NAVIGATION
+// Drawer(
+//         backgroundColor: Colors.deepPurple,
+//         child: Column(
+//           children: [
+//             // Takes up space for the logo
+//             DrawerHeader(child: Icon(
+//                 Icons.local_pizza,
+//                 size:50,
+//                 color: Colors.white)
+//             ),
+//             // Positions for other tiles
+//             ListTile( // Not ListView, just one tile
+//               leading: Icon(Icons.home, color: Colors.white),
+//               title: Text('Home', style: TextStyle(color: Colors.white)),
+//               onTap: () {
+//                 // 'pop' the drawer seems to push draw away for when you return
+//                 Navigator.pop(context);
+//                 // move to the home page
+//                 Navigator.pushNamed(context, '/homePage');
+//               },
+//             ),
+//             ListTile(
+//                 leading: Icon(Icons.settings, color: Colors.white),
+//                 title: Text('Settings', style: TextStyle(color: Colors.white)),
+//                 onTap: () {
+//                   Navigator.pop(context);
+//                   Navigator.pushNamed(context, '/settingsPage');
+//                 },
+//             )
+//           ],
+//         )
+//       ),
+
+
 
 */
 
@@ -333,10 +371,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: FirstPage(),
+      home: HomePage(),
       routes: {
-        '/homePage': (context) => FirstPage(),
-        '/settingsPage': (context) => SecondPage(),
+        '/homePage': (context) => HomePage(),
+        '/settingsPage': (context) => SettingsPage(),
       },
     );
   }
