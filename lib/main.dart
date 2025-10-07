@@ -3,6 +3,7 @@ import 'package:learning_flutter_again/first_lesson/first_page.dart';
 import 'package:learning_flutter_again/first_lesson/home_page.dart';
 import 'package:learning_flutter_again/first_lesson/settings_page.dart';
 import 'package:learning_flutter_again/second_lesson(setStates)/counter_page.dart';
+import 'package:learning_flutter_again/third_lesson(todoapp)/todo_page.dart';
 
 // var companyName = Text('Felix n Co', style:TextStyle(color: Colors.amber, fontSize: 40));
 // var myTransform = Matrix4.skewX(0.1);
@@ -415,7 +416,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: CounterPage(),
+      home: ToDoPage(),
     );
   }
 }
